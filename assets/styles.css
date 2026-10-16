@@ -18,3 +18,11 @@ footer .brand img,
     height: auto !important;
     flex-shrink: 0;
 }
+/* FOOTER LOGO AND COMPANY NAME ALIGNMENT */
+footer .brand,
+.site-footer .brand,
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
