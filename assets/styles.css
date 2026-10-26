@@ -35,6 +35,100 @@
 }
 
 /* Increase actual logo size */
+
+/* ==========================================
+   OMNIPRESENCE - OUR WORK PORTFOLIO
+   ========================================== */
+
+.op-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Card Layout */
+.op-portfolio-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.op-portfolio-card h2 {
+  margin: 12px 0 0;
+}
+
+.op-portfolio-card p {
+  line-height: 1.7;
+}
+
+/* Website Marketing Image */
+.op-portfolio-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #e8e2d8;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.op-portfolio-card a:has(.op-portfolio-image) {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.op-portfolio-card a:hover .op-portfolio-image {
+  transform: scale(1.025);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+}
+
+/* Services Line */
+.op-portfolio-services {
+  font-size: 14px;
+  color: #8b641e;
+  font-weight: 600;
+}
+
+/* Keep project links aligned near card bottom */
+.op-portfolio-card > .text-link {
+  margin-top: auto;
+}
+
+/* Client gallery spans both columns */
+.op-gallery-card {
+  grid-column: 1 / -1;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+  .op-portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .op-gallery-card {
+    grid-column: auto;
+  }
+
+  .op-portfolio-image {
+    width: 100%;
+  }
+}
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .op-portfolio-image {
+    transition: none;
+  }
+}
+
 .hero .orbit-core img {
     width: 500px;
     max-width: 100%;
